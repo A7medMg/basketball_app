@@ -43,7 +43,27 @@ class _Counter_AppState extends State<Counter_App> {
                             Column(
                               children: [
                                 Text('team A' , style: TextStyle(fontSize: 50,color: Colors.white),),
-                                Text('$teamA_score' , style: TextStyle(fontSize: teamA_score.toString().length >= 3 ? 50 : 150,fontWeight: FontWeight.bold,color: Colors.orange),),
+                               AnimatedSwitcher(
+                        duration: Duration(milliseconds: 400),
+                        transitionBuilder: ( child, animation) {
+                              return ScaleTransition(
+                          scale: animation,
+                   child: FadeTransition(
+                    opacity: animation,
+                         child: child,
+                        ),
+                              );
+                        },
+                                 child: Text(
+                               '$teamA_score',
+                         key: ValueKey(teamA_score),
+                           style: TextStyle(
+                         fontSize: teamA_score.toString().length >= 3 ? 50 : 150,
+                            fontWeight: FontWeight.bold,
+                         color: Colors.orange,
+                     ),
+                    ),
+                             ),
                                 ElevatedButton(onPressed: (){
                                   setState(() {
                                      teamA_score++;
@@ -86,7 +106,27 @@ class _Counter_AppState extends State<Counter_App> {
                             Column(
                               children: [
                                 Text('team B' , style: TextStyle(fontSize: 50,color: Colors.white),),
-                                Text('$teamB_score' , style: TextStyle(fontSize:teamB_score.toString().length >= 3 ? 50 : 150,fontWeight: FontWeight.bold,color: Colors.orange),),
+                                AnimatedSwitcher(
+                        duration: Duration(milliseconds: 400),
+                        transitionBuilder: ( child, animation) {
+                              return ScaleTransition(
+                          scale: animation,
+                   child: FadeTransition(
+                    opacity: animation,
+                         child: child,
+                        ),
+                              );
+                        },
+                                 child: Text(
+                               '$teamB_score',
+                         key: ValueKey(teamB_score),
+                           style: TextStyle(
+                         fontSize: teamB_score.toString().length >= 3 ? 50 : 150,
+                            fontWeight: FontWeight.bold,
+                         color: Colors.orange,
+                     ),
+                    ),
+                             ),
                                 ElevatedButton(onPressed: (){
                                   setState(() {
                                      teamB_score++;
