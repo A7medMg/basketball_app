@@ -1,16 +1,17 @@
-# basketball_app
+# 🏀 Basketball Counter App
 
-A new Flutter project.
+A simple Flutter application to count basketball scores for two teams with a clean UI and smooth animations.
+
+## Features
+- Two teams (Team A & Team B)
+- Add 1, 2, or 3 points
+- Reset scores
+- Animated score changes
+- Background image support
+- Responsive layout
 
 ## Getting Started
+Run the following commands to start the app:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub ge
